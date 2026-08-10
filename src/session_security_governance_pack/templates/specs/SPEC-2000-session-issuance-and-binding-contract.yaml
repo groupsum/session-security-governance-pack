@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "spec",
+  "id": "spc:session-issuance-and-binding-contract",
+  "number": 2000,
+  "slug": "session-issuance-and-binding-contract",
+  "title": "Session Issuance And Binding Contract",
+  "status": "accepted",
+  "origin": "extension-pack",
+  "summary": "Defines authenticated-session creation, identifier properties, cookie controls, and assurance binding.",
+  "body": "## Requirements\n\n- Create sessions only from successful authenticated transactions.\n- Use unpredictable identifiers and protected cookie or token transport.\n- Bind principal, authentication time, assurance, and relevant verifier context.",
+  "decision_date": "2026-08-10",
+  "references": [
+    "https://pages.nist.gov/800-63-4/sp800-63b.html",
+    "https://www.rfc-editor.org/rfc/rfc6265"
+  ],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "session",
+    "reauthentication",
+    "step-up",
+    "logout",
+    "session-fixation"
+  ],
+  "spec_kind": "governance",
+  "adr_ids": [
+    "adr:authenticated-sessions-begin-after-authentication",
+    "adr:reauthentication-and-step-up-triggers-are-explicit",
+    "adr:logout-and-session-invalidation-are-security-events"
+  ]
+}

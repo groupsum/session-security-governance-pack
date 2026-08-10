@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "session-security-governance-pack"
+version = "0.1.0.dev1"
+description = "Governance for authenticated-session issuance, binding, rotation, expiration, reauthentication, step-up, logout, invalidation, fixation, CSRF, failure, and audit evidence."
+readme = "README.md"
+requires-python = ">=3.10,<3.15"
+license = "Apache-2.0"
+authors = [{ name = "Jacob Stewart", email = "jacob@swarmauri.com" }]
+dependencies = [
+  "ssot-pack-contracts>=0.2.17,<0.3.0",
+  "tomli>=2.0.1; python_version < '3.11'",
+]
+keywords = [
+  "ssot",
+  "ssot-registry",
+  "ssot-pack-contracts",
+  "governance-pack",
+  "session",
+  "reauthentication",
+  "step-up",
+  "logout",
+  "session-fixation",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Information Technology",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Security",
+  "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.urls]
+Homepage = "https://github.com/groupsum/session-security-governance-pack"
+Repository = "https://github.com/groupsum/session-security-governance-pack"
+Issues = "https://github.com/groupsum/session-security-governance-pack/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"session_security_governance_pack" = ["metadata.json"]
+"session_security_governance_pack.templates.adr" = ["*.json", "*.yaml"]
+"session_security_governance_pack.templates.specs" = ["*.json", "*.yaml"]
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

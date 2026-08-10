@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "spec",
+  "id": "spc:logout-revocation-and-invalidation-contract",
+  "number": 2003,
+  "slug": "logout-revocation-and-invalidation-contract",
+  "title": "Logout Revocation And Invalidation Contract",
+  "status": "accepted",
+  "origin": "extension-pack",
+  "summary": "Defines local and federated logout and administrative invalidation.",
+  "body": "## Requirements\n\n- Invalidate server-side state on logout.\n- Propagate logout or revocation where the protocol supports it.\n- Terminate sessions affected by credential compromise or account suspension.",
+  "decision_date": "2026-08-10",
+  "references": [
+    "https://pages.nist.gov/800-63-4/sp800-63b.html",
+    "https://www.rfc-editor.org/rfc/rfc6265"
+  ],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "session",
+    "reauthentication",
+    "step-up",
+    "logout",
+    "session-fixation"
+  ],
+  "spec_kind": "governance",
+  "adr_ids": [
+    "adr:authenticated-sessions-begin-after-authentication",
+    "adr:reauthentication-and-step-up-triggers-are-explicit",
+    "adr:logout-and-session-invalidation-are-security-events"
+  ]
+}
