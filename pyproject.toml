@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "session-security-governance-pack"
-version = "0.1.0.dev1"
+version = "0.1.0.dev2"
 description = "Governance for authenticated-session issuance, binding, rotation, expiration, reauthentication, step-up, logout, invalidation, fixation, CSRF, failure, and audit evidence."
 readme = "README.md"
 requires-python = ">=3.10,<3.15"
